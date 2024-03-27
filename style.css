@@ -1,0 +1,119 @@
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+}
+
+article {
+    max-width: 20em;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    min-height: 16em;
+    min-width: 20em;
+    background-image: url("./images/image-product-mobile.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0.75em 0.75em 0 0;
+}
+
+.product-info {
+    background-color: white;
+    padding: 1.5em;
+    border-radius: 0 0 0.75em 0.75em;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    article{
+        max-width: 40em;
+        flex-direction: row;
+    }
+    .container{
+        background-image: url("./images/image-product-desktop.jpg");
+        border-radius: 0.75em 0 0 0.75em;
+    }
+    .product-info{
+        padding: 2.5em;
+        border-radius: 0 0.75em 0.75em 0;
+    }
+  }
+
+.product-type {
+    text-transform: uppercase;
+    letter-spacing: 0.45em;
+    color: hsl(228, 12%, 48%);
+    font-weight: 500;
+    margin: 0 0 0.5em 0; 
+    font-size: 0.75em;
+}
+
+.prices {
+    display: flex;
+    gap: 1.5em;
+}
+
+h2,
+.final-price {
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "SOFT" 0,
+        "WONK" 0;
+    font-size: 2em;
+}
+
+.final-price {
+    color: hsl(158, 36%, 37%);
+    margin: 0 0 0.25em 0;
+}
+
+.original-price{
+    font-weight: 500;
+    text-decoration: line-through;
+
+}
+
+h2{
+    margin: 0;
+    color: hsl(212, 21%, 14%);
+    font-size: 1.75em;
+}
+
+button {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    padding: 1em;
+    border-radius: 0.75em;
+    border: none;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    font-weight: 700;
+    font-size: 0.75em;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: hsl(158, 36%, 16%);
+}
+
+p,
+button {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+p {
+    color: hsl(228, 12%, 48%);
+    font-size: 0.85em;
+    line-height: 1.5;
+}
